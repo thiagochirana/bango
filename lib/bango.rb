@@ -1,19 +1,28 @@
 # frozen_string_literal: true
 
-require_relative "bango/version"
+require_relative "countries/brazil"
 
 module Bango
-  class Error < StandardError; end
-
-  class TelephoneError < StandardError
-    def initialize
-      super(%(Telephone is wrong! It is a telephone number?))
-    end
+  def self.valid_phone?(phone:, country:)
+    country_class = get_country_class(country)
+    country_class.valid?(phone)
+  rescue NameError
+    raise ArgumentError, "Country not supported"
   end
 
-  class FormatError < StardardError
-    def initialize
-      super(%(Telephone has a wrong format!))
-    end
+  def self.format_phone(phone:, country:)
+    country_class = get_country_class(country)
+    country_class.format(phone)
   end
+
+  def self.generate_phone(country:)
+    country_class = get_country_class(country)
+    country_class.generate
+  end
+
+  def self.get_country_class(country)
+    Object.const_get("Bango::Countries::#{country.to_s.capitalize}")
+  end
+
+  module_function :valid_phone?, :format_phone, :generate_phone
 end
