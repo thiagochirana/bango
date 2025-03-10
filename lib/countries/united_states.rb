@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require_relative "country"
-module Bango
+module DialTool
   module Countries
-    class Unitedstates < Country
+    class UnitedStates < Country
       def self.valid?(phone)
         !!(phone =~ /\A\+1\d{10}\z/)
       end

@@ -2,7 +2,7 @@
 
 require_relative "country"
 
-module Bango
+module DialTool
   module Countries
     class Brazil < Country
       def self.valid?(phone)
