@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "base"
+require_relative "country"
 module Bango
   module Countries
     class Unitedstates < Country
