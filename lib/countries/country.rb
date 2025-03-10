@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module DialTool
+module TellIo
   module Countries
     class Country
       def self.valid?(phone)

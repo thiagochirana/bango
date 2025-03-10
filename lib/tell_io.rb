@@ -2,7 +2,7 @@
 
 require_relative "countries/brazil"
 
-module DialTool
+module TellIo
   class CountryError < StandardError
     def initialize
       super(%(Country not supported))
@@ -27,8 +27,8 @@ module DialTool
   end
 
   def self.get_country_class(country)
-    Object.const_get("DialTool::Countries::#{country.to_s.capitalize}")
-  end
+    raise CountryError("Country is empty! Please, tell me what's the country") if country.nil?
 
-  #  module_function :valid_phone?, :format_phone, :generate_phone
+    Object.const_get("TellIo::Countries::#{country.to_s.capitalize}")
+  end
 end

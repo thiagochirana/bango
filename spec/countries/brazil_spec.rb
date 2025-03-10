@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-RSpec.describe Bango::Countries::Brazil do
+RSpec.describe TellIo::Countries::Brazil do
   describe ".valid?" do
     it "returns true for valid Brazilian numbers" do
       expect(described_class.valid?("+55 11 999990123")).to be true

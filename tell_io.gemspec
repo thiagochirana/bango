@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-require_relative "lib/dial_tool/version"
+require_relative "lib/tell_io/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "dial_tool"
-  spec.version = DialTool::VERSION
+  spec.name = "tell_io"
+  spec.version = TellIo::VERSION
   spec.authors = ["Thiago Chirana"]
   spec.email = ["engsw.thiago@gmail.com"]
 
   spec.summary = "Formating ang Generating a telephone number of your country"
   spec.description = "Formating ang Generating a telephone number of your country"
-  spec.homepage = "https://github.com/thiagochirana/dial_tool"
+  spec.homepage = "https://github.com/thiagochirana/tell_io"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/thiagochirana/dial_tool"
-  spec.metadata["changelog_uri"] = "https://github.com/thiagochirana/dial_tool/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/thiagochirana/tell_io"
+  spec.metadata["changelog_uri"] = "https://github.com/thiagochirana/tell_io/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
